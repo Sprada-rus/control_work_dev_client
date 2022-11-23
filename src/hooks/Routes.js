@@ -4,6 +4,8 @@ import ResearchPage from "../pages/ResearchPage";
 import Logout from "../pages/Logout";
 import SettingsPage from "../pages/SettingsPage";
 import MainPage from "../pages/MainPage";
+import EditMaterial from "../pages/EditMaterial";
+import AddMaterial from "../pages/AddMaterial";
 
 
 export const useRoutes = (isAuth, type) => {
@@ -23,6 +25,9 @@ export const useRoutes = (isAuth, type) => {
                 <Routes>
                     <Route path="/research" element={<ResearchPage/>} exact/>
                     <Route path="/settings" element={<SettingsPage/>} exact/>
+                    <Route path="/add_material" element={<AddMaterial/>} exact/>
+                    <Route path="/edit_material/:materialId" element={<EditMaterial/>}>
+                    </Route>
                     <Route path="/logout" element={<Logout/>} exact/>
                     <Route path="*" element={<Navigate to="/research" replace/>}/>
                 </Routes>
