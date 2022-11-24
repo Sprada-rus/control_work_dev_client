@@ -63,7 +63,9 @@ export default function SettingsPage(){
     useEffect(() => {
             request('/api/get_table', 'POST', {})
               .then(data => {
-                setGrid(data);
+                  if (data){
+                      setGrid(data);
+                  }
               });
     }, []);
 
