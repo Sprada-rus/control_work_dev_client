@@ -9,7 +9,11 @@
 /coverage
 
 # production
-/build
+/public
+/src
+package.json
+yarn.lock
+README.md
 
 # misc
 .DS_Store
